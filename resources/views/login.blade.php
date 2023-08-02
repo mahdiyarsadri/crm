@@ -72,8 +72,7 @@
                         </div>
                     </div>
                     <div class="mt-5 text-center">
-                        <p>حساب کاربری ندارید؟ <a href="pages-register.html" class="font-weight-medium text-primary"> ثبت نام کنید </a> </p>
-                        <p>طراحی شده با <i class="mdi mdi-heart text-danger"></i> ارائه شده در وب‌سایت راست‌چین</p>
+                        <p>حساب کاربری ندارید؟ <a href="{{route('register')}}" class="font-weight-medium text-primary"> ثبت نام کنید </a> </p>
                     </div>
 
                 </div>
