@@ -396,7 +396,7 @@
                     </div>
                 </div>
 			</header>
-			
+
 			<!-- ========== Left Sidebar Start ========== -->
 			<div class="vertical-menu">
 
@@ -431,7 +431,7 @@
 									<li><a href="{{route('index2')}}">داشبورد 2</a></li>
 								</ul>
 							</li>
-							
+
 							<li>
 								<a href="calendar.html" class=" waves-effect">
 									<i class="mdi mdi-calendar-text"></i>
@@ -469,7 +469,7 @@
 								</a>
 								<ul class="sub-menu" aria-expanded="false">
 									<li><a href="{{route('login')}}">ورود</a></li>
-                                    <li><a href="{{routr('register')}}">ثبت نام</a></li>
+                                    <li><a href="{{route('register')}}">ثبت نام</a></li>
 									<li><a href="pages-recoverpw.html">بازیابی رمز عبور</a></li>
 									<li><a href="pages-lock-screen.html">قفل صفحه</a></li>
 									<li><a href="pages-starter.html">صفحه شروع</a></li>
@@ -1087,7 +1087,7 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <script>document.write(new Date().getFullYear())</script> © کووکس.
-                            </div>                        
+                            </div>
                         </div>
                     </div>
                 </footer>

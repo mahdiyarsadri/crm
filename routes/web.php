@@ -17,12 +17,15 @@ Route::get('/', function () {
     return view('welcome');
 })->name('index');
 
-Route::get('/index2', function () { 
+Route::get('/index2', function () {
     return view('index2');
 })->name('index2');
 
+Route::get('/panel', function (){
+    return view('panel');
+});
 
-Route::get('/login', function () { 
+Route::get('/login', function () {
     return view('login');
 })->name('login');
 
