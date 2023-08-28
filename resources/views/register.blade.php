@@ -23,7 +23,7 @@
 
 <body>
     <div class="home-btn d-none d-sm-block">
-        <a href="{{route('index')}}" class="text-dark"><i class="fas fa-home h2"></i></a>
+        <a href="" class="text-dark"><i class="fas fa-home h2"></i></a>
     </div>
     <div class="account-pages my-5 pt-sm-5">
         <div class="container">
@@ -79,7 +79,7 @@
                                         <label for="useremail">ایمیل</label>
                                         <input type="email" class="form-control" id="useremail" placeholder="ایمیل را وارد کنید">
                                     </div>
-                               
+
                                     <div class="form-group">
                                         <label for="State">استان</label>
                                         <input type="text" class="form-control" id="State" placeholder="استان خود را وارد کنید">

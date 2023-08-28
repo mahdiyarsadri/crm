@@ -4,7 +4,7 @@
 
         <div class="user-wid text-center py-4">
             <div class="user-img">
-                <img src="assets/images/users/avatar-2.jpg" alt="" class="avatar-md mx-auto rounded-circle">
+                <img src="/assets/images/users/avatar-2.jpg" alt="" class="avatar-md mx-auto rounded-circle">
             </div>
 
             <div class="mt-3">
@@ -24,11 +24,11 @@
                 <li>
                     <a href="javascript:%20void(0);" class="has-arrow waves-effect">
                         <i class="mdi mdi-account-circle-outline"></i>
-                        <span>کاربران</span>
+                        <span>مشتریان</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('login')}}">افزودن کاربر جدید</a></li>
-                        <li><a href="{{route('register')}}">لیست کاربران</a></li>
+                        <li><a href="{{route('newuser')}}">افزودن مشتری جدید</a></li>
+                        <li><a href="{{route('userslist')}}">لیست مشتریان</a></li>
 
                     </ul>
                 </li>
@@ -92,11 +92,11 @@
     </div>
 </div>
 
-<!-- Right Sidebar -->
+
 <div class="right-bar">
     <div data-simplebar class="h-100">
         <div class="rightbar-title px-3 py-4">
-            <a href="javascript:void(0);" class="right-bar-toggle float-right">
+            <a href="/javascript:void(0);" class="right-bar-toggle float-right">
                 <i class="mdi mdi-close noti-icon"></i>
             </a>
             <h5 class="m-0">تنظیمات</h5>
@@ -108,7 +108,7 @@
 
         <div class="p-4">
             <div class="mb-2">
-                <img src="assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="">
+                <img src="/assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="">
             </div>
             <div class="custom-control custom-switch mb-3">
                 <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked>
@@ -116,7 +116,7 @@
             </div>
 
             <div class="mb-2">
-                <img src="assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
+                <img src="/assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
             </div>
             <div class="custom-control custom-switch mb-3">
                 <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch" data-bsstyle="assets/css/bootstrap-dark.min.css" data-appstyle="assets/css/app-dark.css">

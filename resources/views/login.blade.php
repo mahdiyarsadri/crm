@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title> ورود - قالب مدیریتی Qovex</title>
+    <title> ورود </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
     <meta content="Themesbrand" name="author">
@@ -42,16 +42,16 @@
                         </div>
                         <div class="card-body pt-5">
                             <div class="p-2">
-                                <form class="form-horizontal" action="index.html">
-
+                                <form class="form-horizontal" action="{{route('loginPanel')}}" method="post">
+                                    @csrf
                                     <div class="form-group">
-                                        <label for="username">نام کاربری</label>
-                                        <input type="text" class="form-control" id="username" placeholder="نام کاربری را وارد کنید">
+                                        <label for="phone_number">نام کاربری</label>
+                                        <input type="text" class="form-control" name="email" placeholder="admin">
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="userpassword">رمز عبور</label>
-                                        <input type="password" class="form-control" id="userpassword" placeholder="رمز عبور را وارد کنید">
+                                        <label for="password">رمز عبور</label>
+                                        <input type="password" class="form-control" name="password" placeholder="*****">
                                     </div>
 
                                     <div class="custom-control custom-checkbox">
@@ -66,6 +66,15 @@
                                     <div class="mt-4 text-center">
                                         <a href="pages-recoverpw.html" class="text-muted"><i class="mdi mdi-lock mr-1"></i> رمز عبور خود را فراموش کرده اید؟</a>
                                     </div>
+                                    @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
                                 </form>
                             </div>
 

@@ -48,7 +48,7 @@
 
                                     </div>
                                 </div>
-                                <h4 class="mt-3 mb-0 primary-font">2,456</h4>
+                                <h4 class="mt-3 mb-0 primary-font">{{$users}}</h4>
                                 <div class="row mb-n1">
                                     <div class="col-7">
                                         <p class="mb-0"><span class="text-success mr-2"> 0.16% <i class="mdi mdi-arrow-up"></i> </span></p>
@@ -157,76 +157,34 @@
                             <div class="card-body">
                                 <h4 class="card-title mb-4">آخرین کاربران</h4>
 
-                                <ul class="inbox-wid list-unstyled">
-                                    <li class="inbox-list-item">
-                                        <a href="#">
-                                            <div class="media">
-                                                <div class="mr-3 align-self-center">
-                                                    <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-sm rounded-circle">
-                                                </div>
-                                                <div class="media-body overflow-hidden">
-                                                    <h5 class="font-size-16 mb-0 mt-n1 primary-font">پائول</h5>
-                                                    <p class="text-truncate mb-0">لورم ایپسوم متن ساختگی با</p>
-                                                </div>
-                                                <div class="font-size-12 ml-2">
-                                                    05 دقیقه
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="inbox-list-item">
-                                        <a href="#">
-                                            <div class="media">
-                                                <div class="mr-3 align-self-center">
-                                                    <img src="assets/images/users/avatar-4.jpg" alt="" class="avatar-sm rounded-circle">
-                                                </div>
-                                                <div class="media-body overflow-hidden">
-                                                    <h5 class="font-size-16 mb-0 mt-n1 primary-font">ماری</h5>
-                                                    <p class="text-truncate mb-0">لورم ایپسوم متن ساختگی</p>
-                                                </div>
-                                                <div class="font-size-12 ml-2">
-                                                    12 دقیقه
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="inbox-list-item">
-                                        <a href="#">
-                                            <div class="media">
-                                                <div class="mr-3 align-self-center">
-                                                    <img src="assets/images/users/avatar-5.jpg" alt="" class="avatar-sm rounded-circle">
-                                                </div>
-                                                <div class="media-body overflow-hidden">
-                                                    <h5 class="font-size-16 mb-0 mt-n1 primary-font">سلینا</h5>
-                                                    <p class="text-truncate mb-0">لورم ایپسوم متن ساختگی</p>
-                                                </div>
-                                                <div class="font-size-12 ml-2">
-                                                    18 دقیقه
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="inbox-list-item">
-                                        <a href="#">
-                                            <div class="media">
-                                                <div class="mr-3 align-self-center">
-                                                    <img src="assets/images/users/avatar-6.jpg" alt="" class="avatar-sm rounded-circle">
-                                                </div>
-                                                <div class="media-body overflow-hidden">
-                                                    <h5 class="font-size-16 mb-0 mt-n1 primary-font">استیو</h5>
-                                                    <p class="text-truncate mb-0">لورم ایپسوم متن ساختگی با تولید</p>
-                                                </div>
-                                                <div class="font-size-12 ml-2">
-                                                    2 ساعت پیش
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
 
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-primary btn-sm">مشاهده همه</a>
+                                        <thead class="thead-light">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>نام</th>
+                                            <th>نام خانوادگی</th>
+                                            <th>تلفن همراه</th>
+                                            <th>زمان ثبت نام</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($lastusers as $user)
+                                            <tr>
+                                                <th scope="row">{{$user->id}}</th>
+                                                <td>{{$user->first_name}}</td>
+                                                <td>{{$user->last_name}}</td>
+                                                <td>{{$user->mobile_number}}</td>
+                                                <td>{{$user->created_at}}</td>
+                                            </tr>
+                                        @endforeach                                         </tbody>
+                                    </table>
+                                    <div class="text-center">
+                                        <a href="{{route('userslist')}}" class="btn btn-primary btn-sm">مشاهده همه</a>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -310,16 +268,7 @@
                 <!-- end row -->
             </div>
             <!-- End Page-content -->
-
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © CRM.
-                        </div>
-                    </div>
-                </div>
-            </footer>
+@include('footer')
         </div>
         <!-- end main content-->
 
@@ -333,26 +282,4 @@
 <!-- /Right-bar -->
 
 <!-- Right bar overlay-->
-<div class="rightbar-overlay"></div>
-
-<!-- JAVASCRIPT -->
-<script src="assets/libs/jquery/jquery.min.js"></script>
-<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/libs/metismenu/metisMenu.min.js"></script>
-<script src="assets/libs/simplebar/simplebar.min.js"></script>
-<script src="assets/libs/node-waves/waves.min.js"></script>
-
-<!-- apexcharts -->
-<script src="assets/libs/apexcharts/apexcharts.min.js"></script>
-
-<!-- jquery.vectormap map -->
-<script src="assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js"></script>
-
-<script src="assets/js/pages/dashboard.init.js"></script>
-
-<script src="assets/js/app.js"></script>
-
-</body>
-
-</html>
+@include('script')
