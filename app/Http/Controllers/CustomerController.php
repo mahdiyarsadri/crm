@@ -62,14 +62,14 @@ class CustomerController extends Controller
 
     public function showeditpage($id)
     {
-        $user = User::find($id);
+        $user = Customer::find($id);
         return view('edituser' , ['user'=>$user]);
 
     }
 
     public function edit($id)
     {
-        $user = User::find($id);
+        $user = Customer::find($id);
         $user->update([
             $user->first_name = request('first_name'),
             $user->last_name = request('last_name'),
@@ -81,7 +81,6 @@ class CustomerController extends Controller
             $user->mobile_number = request('mobile_number'),
             $user->gender = request('gender'),
             $user->education = request('education'),
-            $user->password = request('password'),
             $user->image = request('image'),
             $user->State = request('State'),
             $user->city = request('State'),
@@ -90,7 +89,7 @@ class CustomerController extends Controller
             $user->save(),
         ]);
 
-        return view('userslist');
+        return redirect('userslist');
 
     }
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\CustomerController;
 use \App\Http\Controllers\UserController;
@@ -27,6 +28,7 @@ Route::get('/login' , [CustomerController::class, 'login'])->name('login');
 Route::get('/' , function(){
     return 'home';
 })->name('login');
+
 Route::post('/login' , [UserController::class, 'loginPanel'])->name('loginPanel');
 Route::get('logout' , [UserController::class, 'logout'])->name('logout');
 
@@ -36,5 +38,5 @@ Route::get('/register', function() {
 
 Route::get('/userslist',  [CustomerController::class , 'userslist'])->name('userslist');
 Route::get('/edituserpage/{id}' , [CustomerController::class, 'showeditpage'])->name('showeditpage');
-//Route::post('/edituserpage/{id}' , [UserController::class, 'edit'])-name('edituserpage');
-Route::get('/newproduct' , [\App\Http\Controllers\ProductController::class , 'newproduct'])->name('newproduct');
+Route::post('/edituserpage/{id}' , [CustomerController::class, 'edit'])->name('edituserpage');
+Route::get('/newproduct' , [ProductController::class , 'newproduct'])->name('newproduct');

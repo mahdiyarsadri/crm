@@ -24,14 +24,26 @@
                 <li>
                     <a href="javascript:%20void(0);" class="has-arrow waves-effect">
                         <i class="mdi mdi-account-circle-outline"></i>
-                        <span>مشتریان</span>
+                        <span>کاربران</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('newuser')}}">افزودن مشتری جدید</a></li>
-                        <li><a href="{{route('userslist')}}">لیست مشتریان</a></li>
+                        <li><a href="{{route('newuser')}}">افزودن کاربر جدید</a></li>
+                        <li><a href="{{route('userslist')}}">لیست کاربران</a></li>
 
                     </ul>
                 </li>
+
+{{--                <li>--}}
+{{--                    <a href="javascript:%20void(0);" class="has-arrow waves-effect">--}}
+{{--                        <i class="mdi mdi-account-circle-outline"></i>--}}
+{{--                        <span>مشتریان</span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="sub-menu" aria-expanded="false">--}}
+{{--                        <li><a href="{{route('newcustomer')}}">افزودن مشتری جدید</a></li>--}}
+{{--                        <li><a href="{{route('customerslist')}}">لیست مشتریان</a></li>--}}
+
+{{--                    </ul>--}}
+{{--                </li>--}}
 
 
                 <li>

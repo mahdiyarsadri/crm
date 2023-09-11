@@ -173,7 +173,7 @@
                                     <div class="col-md-12">
                                         <label>آدرس</label>
                                         <div>
-                                            <textarea name="Address" required class="form-control" rows="5">value="{{$user->Address}}"</textarea>
+                                            <textarea name="Address" required class="form-control" rows="5">{{$user->Address}}</textarea>
                                         </div>
                                     </div>
 
@@ -188,7 +188,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="btn btn-outline-primary" type="submit">افزودن کاربر</button>
+                                <button class="btn btn-outline-primary" type="submit">ویرایش کاربر</button>
                             </form>
                         </div>
                     </div>
