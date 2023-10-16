@@ -21,6 +21,7 @@ Route::post('/edituserpage/{id}' , [UserController::class, 'edit'])->name('editu
 Route::get('/newuser' , [UserController::class , 'newuser'])->name('newuser');
 Route::post('newuser' , [UserController::class, 'adduser'])->name('adduser');
 Route::post('/login' , [UserController::class , 'login']);
+Route::delete('/deleteuser/{id}' , [UserController::class, 'delete'])->name('delete');
 
 Route::group([
     "middleware" => "auth:sanctum"
